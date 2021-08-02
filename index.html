@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            background-color: #0d0038;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 50px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+        .movie{
+            background-color: rgba(105, 105, 105, 0.288);
+            width:220px;
+            margin:10px 10px;
+            border-radius: 10px;
+        }
+        .cont_img{
+            width:inherit;
+        }
+        .cont_img img{
+            width: inherit;
+            height:290px;
+            object-fit: cover;
+            border-top-left-radius:10px ;
+            border-top-right-radius:10px ;
+        }
+        .cont{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            display:flex;
+            margin:0px 10px;
+        }
+        i{
+            border-radius: 5px;
+            background-color: #012e8f;
+            padding:8px 90px;
+        }
+        i:hover{
+            background-color: aliceblue;
+            color:#276ae6;
+            cursor:pointer;
+        }
+        .cont_des{
+            margin:5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .cont p {
+            display: none;
+        }
+        .cont_but{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .window{
+            width:70%;
+            height:500px;
+            background-color: #0b0020f1;
+            position:fixed;
+            z-index:3 ;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 10px;
+            display:none;
+            align-items: center;
+            border:2px solid #8400ffa6;
+        }
+        @media( max-width:750px){
+            .containerInfo{
+                flex-direction: column;
+                
+            }
+            .window{
+                padding-top: 200px;
+                overflow: scroll;
+                width:99%;
+            }
+        }
+        .window #btn{
+            position: absolute;
+            right:0;
+            top:0;
+            padding:10px;
+            background-color: red;
+            margin:10px;
+            border:none;
+        }
+        .window #imgW{
+            width:250px;
+        }
+        .containerInfo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:30px;
+        }
+        .paragraph{
+            text-align: left;
+            margin:30px;
+        }
+        .paragraph #pw{
+            max-width: 80%;
+            height: 90px;
+            text-align: left;
+            font-family: monospace, Helvetica, sans-serif;
+            max-width: 500px; /* change to your preferences */
+            overflow: hidden;
+        }
+        .paragraph h1{
+            border-bottom: 2px solid #8400ff;
+            margin-bottom:40px;
+            padding-bottom: 3px;
+            font-size: 50px;
+            letter-spacing: 2px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .paragraph h3{
+            margin-bottom:10px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .cont_p{
+            height:40px;
+            overflow: hidden;
+        }
+        .titlePage{
+            font-size: 70px;
+            font-family: 'Courier New', Courier, monospace;
+            padding:20px;
+            text-align: center;
+            line-height:10px;
+        }
+        .ti{
+        }
+        body{
+            background-color: #2a0155;
+
+        }
+
+    </style>
+    <body>
+        <div class="ti">
+        <h1 class="titlePage">you</h1><h1 class="titlePage">Movies</h1>
+
+        </div>
+        <div class="container" id="container">
+        </div>
+        <div class="window" id ="window">
+            <input type="button" value = "X" id ="btn">
+            <div class="containerInfo">
+
+                <div>
+                    <img src="" alt="" id ="imgW">
+                </div>
+                <div class="paragraph">
+                    <h1 id ="title">title peli</h1>
+                    <h3>Overview</h3>
+                    
+
+                        <div id="pw"></div>
+                    
+                </div>
+            </div>
+          
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
